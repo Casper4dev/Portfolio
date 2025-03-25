@@ -1,0 +1,29 @@
+
+* {
+    /* margin: 0; */
+    font-family: "Stylish", serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(80, 145, 131);
+    align-items: center;
+}
+.bold {
+    font-weight: 700;
+}
+
+.nav-item {
+    list-style:armenian;
+    display: inline-block;
+    margin: 0 15px;
+    transition: .6s;
+}
+.nav-item:hover{
+    transform: scale(1.5);
+}
+.nav-item a {
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+}
