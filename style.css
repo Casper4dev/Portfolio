@@ -23,11 +23,16 @@ header {
     display: inline;
     margin: 0 15px;
 }
-
+.nav-items li:hover {
+    transform: scale(1.1);
+}
 .nav-items a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+.nav-items a:hover {
+    color: lightblue;
 }
 .about {
     text-align: center;
@@ -39,6 +44,9 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+}
+.profile-img img:hover {
+    transform: scale(1.1);
 }
 .skills {
     text-align: center;
@@ -56,4 +64,26 @@ header {
     padding: 10px;
     background: #f4f4f4;
     border-radius: 5px;
+}
+.projects {
+    text-align: center;
+    padding: 50px;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: #333;
+    color: white;
+}
+
+.contact a {
+    color: lightblue;
+    text-decoration: none;
 }
