@@ -87,3 +87,15 @@ header {
     color: lightblue;
     text-decoration: none;
 }
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
