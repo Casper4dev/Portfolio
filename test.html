@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Slideshow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slideshow-container {
+      max-width: 600px;
+      margin: 50px auto;
+      position: relative;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      color: white;
+      background: #333;
+      border-radius: 50%;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .prev { left: -30px; }
+    .next { right: -30px; }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="slide active">
+    <h2>Welcome</h2>
+    <p>This is the first section of your text-based slideshow. You can add anything here like a title and paragraph.</p>
+  </div>
+
+  <div class="slide">
+    <h2>About Us</h2>
+    <p>Here's another section. This could explain your project, website, or team.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Contact Info</h2>
+    <p>This final section might include ways to reach you or links to your portfolio or social media.</p>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <span class="prev" onclick="changeSlide(-1)">❮</span>
+  <span class="next" onclick="changeSlide(1)">❯</span>
+</div>
+
+<!-- Dots -->
+<div class="dot-container">
+  <span class="dot active" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlide(slideIndex);
+
+  function changeSlide(n) {
+    showSlide(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlide(slideIndex = n);
+  }
+
+  function showSlide(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("active");
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+  }
+
+  // Optional: Auto-slide every 5 seconds
+  setInterval(() => {
+    changeSlide(1);
+  }, 5000);
+</script>
+
+</body>
+</html>

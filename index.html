@@ -5,57 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeshola Adetomiwa | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <header>
-        <h1>Adeshola Adetomiwa</h1>
+    <header class="header-clean">
+        <h1>ADETOMIWA</h1>
+        <h2>WEB DEVELOPER</h2>
+        <!-- Hamburger Icon -->
+       <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <!-- Nav Menu -->
+        <ul class="nav-items" id="mobileMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
         <nav>
             <ul class="nav-items">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#skills">Skills</a></li>
                 <li class="nav-item"><a href="#projects">Projects</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
             </ul>
         </nav>
+        <div><img src="https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-gender-neutral-silhouette-profile-picture-suitable-social-media-profiles-icons-screensavers-as-templatex9xa_719432-2210.jpg?w=740" alt="Adeshola Adetomiwa" width="100">
+       </div>
     </header>
-
-    <section id="about" class="about">
-        <div class="profile-img">
-            <img src="https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-gender-neutral-silhouette-profile-picture-suitable-social-media-profiles-icons-screensavers-as-templatex9xa_719432-2210.jpg?w=740" alt="Adeshola Adetomiwa" width="100">
+    
+    <div class="slideshow">
+        <div class=" slide active">
+            <section id="about" class="about">
+                <div class="profile-img">
+                    
+                </div>
+                <h2>ABOUT ME</h2>
+                <p>Hi, I’m <b>Adetomiwa</b>, a passionate frontend developer who loves bringing ideas to life in the browser. I enjoy building responsive, user-friendly websites using HTML, CSS, and JavaScript, and I’m always exploring new tools to grow my skills.</p>
+            </section>
         </div>
-        <h2>About Me</h2>
-        <p></p>
-    </section>
+    <div class="slide">
+        <section id="projects" class="projects">
+               <h2>PROJECTS</h2>
+            <div class="pro">
+                <div class="project" >
+                    <img src="./Images/Recipe Page.png" alt="Recipe Page">
+                    <h3>Recipe Page</h3>
+                    <p>A simple well structured recipe page designed with HTML & CSS</p>
+                    <a href="" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <img src="./Images/Contact Form.png" alt="Contact Form">
+                    <h3>Contact Form page</h3>
+                    <p>A responsive contact form that included the use of Javascript for validation</p>
+                    <a href="https://github.com/Casper4dev/contact-form" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <img src="./Images/News Homepage.png" alt="News Homepage">
+                    <h3>News Homepage</h3>
+                    <p>A mobile-friendly news home page with dynamic layout designed with the use of HTML,CSS & JS</p>
+                    <a href="https://github.com/Casper4dev/news-homepage" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
 
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML5 & CSS</li>
-            <li>JavaScript</li>
-            <li>Responsive Web Design</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>A simple website built using HTML, CSS, and JavaScript.</p>
+        <div class="slide">
+            <section id="services" class="services">
+                <h1>WHAT I OFFER</h1>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Frontend Development</h3>
+                        <p>I build responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class='bx bx-devices'></i>
+                        <h3>Responsive Design</h3>
+                        <p>Every site I build looks great on mobile, tablet, and desktop.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class='bx bx-bug'></i>
+                        <h3>Debugging & Fixes</h3>
+                        <p>I can help you squash annoying bugs and improve performance.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>A responsive Netflix sign-in page clone designed for mobile and desktop.</p>
-            <a href="https://github.com/Casper4dev/starting-repository" target="_blank">View on GitHub</a>
-        </div>
-    </section>
+        <span class="prev"><i class='bxr  bx-arrow-left-stroke' ></i> </span>
+        <span class="next"><i class='bxr  bx-arrow-right-stroke' ></i> </span>
+    </div>
+        <div class="dot-container">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+    
+    <div class="skills-container">
+        <h2>TECH STACK</h2>
+        <section id="skills" class="skills">
+            <ul>
+            <div class="icon-container">
+                <li><i class="bxl bx-html5 "></i></li>
+                <span class="tooltip">HYPERTEXT MARKUP LANGUAGE</span>
+            </div>
+            <div class="icon-container">
+                <li><i class='bxl  bx-css3'></i> </li>
+                <span class="tooltip">CASCADING STYLE SHEET</span>
+            </div>
+            <div class="icon-container">
+                <li><i class='bxl  bx-bootstrap '></i></li>
+                <span class="tooltip">BOOTSTRAP</span>
+            </div>
+            <div class="icon-container">
+                <li><i class='bxl  bx-javascript'></i> </li>
+                <span class="tooltip">JAVASCRIPT</span>
+            </div>
+            <div class="icon-container">
+                <li><i class="bxl bx-git bx-beat " ></i></li>
+                <span class="tooltip">GIT VERSION CONTROL SYSTEM</span>
+            </div>
+            </ul>
+        </section>
+    </div>
 
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: tomiwaap@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/Casper4dev" target="_blank">Casper4dev</a></p>
-    </section>
+       
+        <button id="openFormBtn">Contact Me</button>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <h2>Contact Me</h2>
+                <form id="popupContactForm" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                <small class="error" id="nameError"></small>
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <small class="error" id="emailError"></small>
+            
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+                <small class="error" id="messageError"></small>
+            
+                <button type="submit">Send</button>
+                </form>
+            
+            </div>
+        </div>
+        <div class="contact-icons">
+            <a href="https://www.instagram.com/" target="_blank"><i class='bxl bx-instagram'></i></a>
+            <a href="https://github.com/Casper4dev" target="_blank"><i class='bxl bx-github'></i></a>
+            <a href="mailto:tomiwaap@gmail.com" target="_blank"><i class='bxl bx-gmail'></i></a>
+        </div>
+        <footer>
+            <p>&copy; 2025 Adetomiwa. All rights reserved.</p>
+        </footer>
+    </section> 
     <script src="work.js"></script>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            dots[i].classList.remove("active");
+          });
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
+        }
+      
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            showSlide(i);
+          });
+        });
+
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("show");
+        });
+      </script>
 </body>
 </html>

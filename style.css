@@ -1,22 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Playfair Display", serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #ECF0F1;
     color: black;
-    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
-header {
-    background: #333;
+.hamburger{
+  display: none;
+}
+#mobileMenu{
+  display: none;
+}
+.header-clean {
+    font-size: 13px;
+    position: relative;
+    height: 90vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .header-clean *{
+    position: relative;
+    z-index: 1;
+  }
+  .header-clean::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(https://img.freepik.com/free-photo/teleworker-working-from-home-typing-laptop-keyboard-close-up_482257-124233.jpg?ga=GA1.1.831209903.1743125336&semt=ais_hybrid&w=740);;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: 0;
+  }
+  
+  .header-clean h1 {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+  }
+ 
+.header-content{
+    height: 90vh;
     color: white;
     text-align: center;
+    align-items: center;
+    position: relative;
     padding: 20px;
+    overflow: hidden;
+}
+
+header h1 {
+    padding-top: 25px;
+    font-size: 40px;
+}
+header h2{
+  font-weight: 300;
+    color: #BDC3C7;
+    padding-top: 5px;
 }
 
 .nav-items {
     list-style: none;
     padding: 0;
+    margin-bottom: 120px;
 }
 
 .nav-items li {
@@ -32,60 +85,374 @@ header {
     font-weight: bold;
 }
 .nav-items a:hover {
+    transform: scale(1.5);
     color: lightblue;
 }
+
+div img{
+    margin:20px auto;
+    width: 15%;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+}
+div img:hover{
+  transform: scale(1.1);
+}
+.slideshow{
+    border: #34495E;
+    background: #ECF0F1;
+    height: 70vh;
+    max-width: 170vh;
+    position: relative;
+    margin: auto;
+    margin-top: 2px;
+}
 .about {
+    font-size:15px;
+    color: #34495E;
+    display: block;
     text-align: center;
-    padding: 50px;
+    padding: 80px;
+    padding-top: 20px;
+}
+.about h2{
+  display: flex;
+  margin-left: -129px;
+  color: #BDC3C7;
+}
+.about p{
+  width: 390px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.profile-img img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+.projects {
+  color: #34495E;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  padding: 2px;
+  padding-top: 10px;
 }
-.profile-img img:hover {
-    transform: scale(1.1);
+
+.pro {
+  display: flex;
+  margin: 0 auto;
+  font-size: 12px;
+  padding-left: 70px;
+  
 }
-.skills {
+
+.project {
+  width: 200px;
+  background: #f9f9f9;
+  padding: 20px;
+  padding-top: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.projects h2{
+    display: flex;
+    margin-left: -60px;
+    color: #BDC3C7;
+  }
+
+.project a{
+  text-decoration: none;
+  font-weight: 800;
+  color: #333;
+}
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 80%;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1px;
+}
+
+
+.services {
+  color: hsl(210, 29%, 24%);
+  padding: 10px 10px;
+  background-color: #ECF0F1;
+  text-align: center;
+}
+
+.service-cards {
+  font-size:15px;
+  color: #2C3E50;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #34495E;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 200px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card i {
+  font-size: 36px;
+  color:#34495E;
+  margin-bottom: 15px;
+}
+.prev , .next {
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    color: rgb(102, 4, 4);
+    user-select: none;
+    z-index: 10;
+  }
+
+  .prev { left: -80px; }
+  .next { right: -80px; }
+
+.prev i, .next i{
+    font-size: 44px;
+    color: #2C3E50;
+}
+.dot-container{
     text-align: center;
-    padding: 50px;
+    margin-top: -17px;
+    position: relative;
+    z-index: 10;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    margin:  0 5px;
+    align-items: center;
+    background-color:white;
+    border: 1px solid #2C3E50;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #2C3E50;
+  }
+
+.slide {
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+  }
+
+.skills-container{
+    height: 60vh;
+    padding: 30px;
+    color: #2C3E50;
+    background: #BDC3C7;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+.skills {
+    background-color: #BDC3C7;
+    border: 1px solid #2C3E50;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 30px;
 }
 
 .skills ul {
+    display: flex;
     list-style: none;
     padding: 0;
 }
 
 .skills li {
+    color: #34495E;
     display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    background: #f4f4f4;
-    border-radius: 5px;
+    margin:0 auto;
+    padding: 2px;
 }
-.projects {
-    text-align: center;
-    padding: 50px;
+.skills li i{
+    font-size: 40px;
+}
+.skills li i:hover{
+  transform: scale(1.5);
+}
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -30px; /* Adjust this to control position */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
 }
 
-.project {
-    background: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
+.icon-container {
+  position: relative;
+  display: inline-block;
+  margin: 40px;
+}
+
+.icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 .contact {
+    height: 10px;
+    padding-top: 10px;
     text-align: center;
-    padding: 50px;
-    background: #333;
+    background: #ECF0F1;
     color: white;
 }
 
-.contact a {
-    color: lightblue;
+.contact i{
+    color: #BDC3C7;
     text-decoration: none;
+}
+.contact i:hover{
+  transform: scale(1.1);
+  color: #2C3E50;
+}
+/* Button */
+#openFormBtn {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background:#34495E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #openFormBtn:hover{
+    transform: scale(1.1);
+  }
+  
+  /* Modal Background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Modal Content Box */
+  .modal-content {
+    background: #fff;
+    color: #34495E;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 300px;
+    position: relative;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Form Inputs */
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+  
+  .contact-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact-icons a {
+    color: #34495E;
+    font-size: 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-icons a:hover {
+    color: #2C3E50;
+  }
+  .modal-content button {
+    background: #34495E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background: #2C3E50;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    display: none;
+  }
+footer{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color:#2C3E50 ;
 }
 #backToTop {
     position: fixed;
@@ -98,4 +465,237 @@ header {
     cursor: pointer;
     display: none;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 360px) {
+    .hamburger {
+      
+      font-size: 26px;
+      cursor: pointer;
+      display: block;
+      padding: 15px;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      z-index: 999;
+    }
+  
+    .nav-items {
+      display: none;
+      flex-direction: column;
+      background-color: #34495E;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .nav-items li {
+      margin: 10px 0;
+    }
+  
+    .nav-items.show {
+      display: flex;
+    }
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .header-clean,
+  .header-content {
+    height: 300px;
+    padding: 10px;
+  }
+
+  .header-clean h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .nav-items {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .nav-items li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  div img {
+    width: 90px;
+    height: 90px;
+    margin: 10px auto;
+  }
+
+  .slideshow {
+    height: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .dot-container {
+    position: absolute;
+    top: 197%;
+    bottom: -800px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slide {
+    opacity:0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .active{
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+  }
+  .about {
+    padding: 70px;
+    font-size: 19px;
+  }
+
+  .about p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about h2 {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .pro {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .project{
+    height: 160px;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .projects h2 {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+
+  .skills-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .skills {
+    max-width: 95%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .skills ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon-container {
+    margin: 15px;
+  }
+
+  /* Display contact form directly, not modal */
+  .modal {
+    display: block;
+    position: relative;
+    background: transparent;
+    padding: 0;
+    height: auto;
+  }
+
+  .modal-content {
+    background: #ECF0F1;
+    color: #34495E;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    padding: 10px;
+  }
+  #openFormBtn{
+    display: none;
+  }
+  .closeBtn {
+    display: none;
+  }
+
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .modal-content button {
+    background: #34495E;
+    color: white;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .contact-icons {
+    color: #2C3E50;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .contact-icons a {
+    font-size: 18px;
+    color: black;
+    margin: 0 5px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  #backToTop {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 }
