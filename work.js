@@ -36,10 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.addEventListener('click', () => showSlide(index));
   });
 
-  Auto-slide
-  setInterval(() => {
-    changeSlide(1);
-  }, 5000);
+  
+  // setInterval(() => {
+  //   changeSlide(1);
+  // }, 5000);
+  showSlide(0);
 });
 
    
